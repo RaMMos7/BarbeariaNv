@@ -1,0 +1,324 @@
+/* --- FORÇAR A FONTE EM TUDO --- */
+* {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+/* --- CONFIGURAÇÃO DO CORPO (BODY) --- */
+body {
+    background-color: #211F20 !important; /* Cor cinza escuro */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* --- LOGO --- */
+.logo-area {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.logo-image {
+    max-width: 250px; /* Tamanho máximo da logo */
+    height: auto;
+}
+
+.insta-logo {
+    max-width: 40px; /* Tamanho máximo do logo do Instagram */
+    height: auto;
+}
+
+/* --- O CARD CINZA --- */
+.custom-card {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom: 30px;}
+
+/* --- BOTÕES --- */
+.btn-custom {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+    transition: transform 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.btn-custom:hover {
+    color: white;
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+/* Gradiente Azul */
+.btn-blue-gradient {
+    background: linear-gradient(180deg, #1062cc 0%, #002a70 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Gradiente Instagram */
+.btn-insta-gradient {
+    background: linear-gradient(90deg, #ff8c00 0%, #ff0080 50%, #9d00c4 100%);
+    flex-direction: row;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.icon-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+/* --- RODAPÉ --- */
+.info-footer {
+    margin-top: 40px;
+    font-size: 1.05rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.info-footer strong {
+    font-weight: 700;
+}
+
+
+/* --- !!!!!!!!!!!!!1ESTILOS DA TELA DE AGENDAMENTO (image_4d7db9)!!!!!!1 --- */
+
+/* Títulos das seções (Dia, Horário, Nome...) */
+.section-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* --- DIAS (Círculos) --- */
+.day-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.day-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #004aad; /* Azul da borda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.day-label {
+    font-weight: 700;
+    color: #004aad; /* Azul do texto (seg, ter...) */
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Estilo do Dia Selecionado (Fundo Azul) */
+.day-item.selected .day-circle {
+    background-color: #004aad;
+    color: white;
+}
+
+ .day-circle:hover {
+     transform: scale(1.05);
+    background-color: #004aad;
+    color: white;
+}
+
+/* --- HORÁRIOS --- */
+.time-period-label {
+    color: #004aad; /* "Manhã" e "Tarde" em azul */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.time-scroll-area {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+    /* Customização da barra de rolagem */
+    scrollbar-width: thin;
+    scrollbar-color: #004aad #e0e0e0;
+}
+
+/* Botão de hora padrão */
+.btn-time {
+    border: 2px solid #004aad;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    min-width: 80px;
+}
+
+/* Hora Selecionada (Fundo Azul Sólido) */
+.btn-time.active, .btn-time:hover {
+    background-color: #004aad;
+    color: white;
+}
+
+/* Hora Ocupada (Borda Vermelha) */
+.btn-time.busy {
+    border-color: #dc3545;
+    color: #dc3545; /* Texto vermelho */
+    background-color: #f8d7da; /* Fundo levemente vermelho */
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* --- INPUTS E FORMULÁRIO --- */
+.custom-input {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    font-weight: 600;
+    color: #004aad; /* Texto azulado igual imagem */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.custom-input::placeholder {
+    color: #ccc;
+    font-weight: 400;
+}
+
+/* Botão Confirmar */
+.btn-confirmar {
+    background-color: #004aad;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.btn-confirmar:hover {
+    transform: scale(1.05);
+    background-color: #003380;
+    color: white;
+}
+
+/* Linha divisória apenas em telas grandes */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 2px solid #004aad;
+    }
+}
+
+
+
+/* --- ESTILOS DA TELA DE CONFIRMAÇÃO (Tela 3) --- */
+
+/* Títulos das colunas (Dia:, Horário:, Procedimento) */
+.info-label {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Círculo do Dia (Azul preenchido) */
+.confirmed-day-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #004aad; /* Azul sólido */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Texto "terça-feira" */
+.confirmed-day-text {
+    color: #002a70; /* Azul bem escuro */
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Texto pequeno "Tarde" */
+.period-label {
+    color: #155b9c; /* Azul claro */
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+/* Botão de Hora Confirmada (14:00) */
+.confirmed-time-badge {
+    background-color: #004aad;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Caixa Branca do Procedimento */
+.procedure-box {
+    width: 100%;
+    max-width: 180px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #004aad;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Link do Instagram no rodapé */
+.insta-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.8rem;
+     transform: scale(1.05)
+}
