@@ -8,46 +8,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="container d-flex flex-column align-items-center">
-        
         <div class="logo-area">
             <img src="/imgs/image 1.png" alt="Logo Barbearia" class="logo-image">
         </div>
 
         <div class="card custom-card shadow-lg">
             
-            <h2 class="text-center card-title mb-5">
-                Horário marcado Miguel !
+            <h2 class="text-center card-title mb-5" id="conf-titulo">
+                Horário marcado!
             </h2>
 
             <div class="row text-center align-items-start mb-5">
                 
                 <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center">
                     <h4 class="info-label">Dia:</h4>
-                    <div class="confirmed-day-circle">2</div>
-                    <div class="confirmed-day-text">terça-feira</div>
+                    <div class="confirmed-day-circle" id="conf-dia-num">--</div>
+                    <div class="confirmed-day-text" id="conf-dia-sem">--</div>
                 </div>
 
                 <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center">
                     <h4 class="info-label">Horário:</h4>
-                    <span class="period-label">Tarde</span>
-                    <div class="confirmed-time-badge">14:00</div>
+                    <span class="period-label" id="conf-periodo">--</span>
+                    <div class="confirmed-time-badge" id="conf-hora">--:--</div>
                 </div>
 
                 <div class="col-md-4 d-flex flex-column align-items-center">
                     <h4 class="info-label">Procedimento</h4>
-                    <div class="procedure-box"></div>
+                    <div class="procedure-box d-flex align-items-center justify-content-center fw-bold p-2" id="conf-proc">
+                        --
+                    </div>
                 </div>
 
             </div>
 
             <div class="row align-items-end mt-4">
-                
                 <div class="col-md-8 info-footer mt-0">
                     <div><strong>Endereço:</strong> R. São Domingos, 25 - Mangabeiras, Maceió - AL, 57037-538</div>
                     <div><strong>Contato:</strong> +55 82 8891-8955</div>
@@ -56,7 +55,7 @@
 
                 <div class="col-md-4 text-md-end text-center mt-3 mt-md-0">
                     <a href="#" class="insta-footer-link">
-                        <img src="/imgs/image 3.png" alt="">
+                        <img src="/imgs/image 3.png" class="insta-logo" alt="">
                         <span>barbearia_novovisual18_</span>
                     </a>
                 </div>
@@ -66,5 +65,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-confirmacao.js"></script>
 </body>
 </html>
