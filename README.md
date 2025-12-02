@@ -1,13 +1,13 @@
-# 💈 Nome do Seu Projeto (Ex: BarberManage)
+# 💈 Barbearia Novo Visual 
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 ![Badge Licença](http://img.shields.io/static/v1?label=LICENSE&message=MIT&color=BLUE&style=for-the-badge)
 
 ## 💻 Sobre o Projeto
 
-O **[Nome do Seu Projeto]** é um sistema de gerenciamento e agendamento para barbearias. O objetivo é facilitar a vida do barbeiro, organizando sua agenda, e trazer comodidade para o cliente, que pode marcar seu corte a qualquer hora do dia.
+O **Barbearia Novo Visual** é um sistema de gerenciamento e agendamento para barbearias. O objetivo é facilitar a vida do barbeiro, organizando sua agenda, e trazer comodidade para o cliente, que pode marcar seu corte a qualquer hora do dia.
 
-O projeto foi desenvolvido como [Trabalho de Faculdade / Projeto Pessoal / MVP] para praticar conhecimentos em [React / Node / Java / Python].
+O projeto foi desenvolvido como [Trabalho de Faculdade / Projeto Pessoal / MVP] para praticar conhecimentos em [React / Node / FrameWork / HTML5].
 
 ---
 
@@ -24,29 +24,22 @@ O projeto foi desenvolvido como [Trabalho de Faculdade / Projeto Pessoal / MVP] 
 
 ## 🎨 Layout
 
-Você pode visualizar o layout do projeto através [Deste Link](link-do-figma-ou-site).
-
-### Mobile / Web
-![Screenshot da Aplicação](https://via.placeholder.com/800x400?text=Insira+uma+imagem+do+sistema+aqui)
-
----
+Você pode visualizar o layout do projeto através [Deste Link](https://www.figma.com/design/y6GzFsZp8sUuzh323G7V8d/Barbearia-Novo-visual?node-id=0-1&t=25Qizy2zQGbBEihA-1).
 
 ## 🛠 Tecnologias Utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Front-end**
-* **[React / Vue / Angular / Flutter]**
-* **[TailwindCSS / Bootstrap / Styled Components]**
-* **[Axios]**
+#### **Front-end*
+* **[TailwindCSS / Bootstrap ]**
 
 #### **Back-end**
-* **[Node.js / Java Spring / Python Django]**
+* **[Node.js /**
 * **[Express]**
 * **[JWT (JSON Web Token)]** - Para autenticação
 
 #### **Banco de Dados**
-* **[PostgreSQL / MongoDB / MySQL]**
+* **[MongoDB]**
 
 ---
 
@@ -59,20 +52,4 @@ Além disso é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ### 🎲 Rodando o Back End (Servidor)
 
-```bash
-# Clone este repositório
-$ git clone [https://github.com/seu-usuario/nome-do-repo.git](https://github.com/seu-usuario/nome-do-repo.git)
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nome-do-repo
-
-# Vá para a pasta server
-$ cd server
-
-# Instale as dependências
-$ npm install (ou yarn install)
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev (ou yarn dev)
-
-# O servidor iniciará na porta:3333 - acesse <http://localhost:3333>
+Em andamento....
