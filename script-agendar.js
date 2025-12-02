@@ -1,22 +1,14 @@
-// Espera o site carregar todo
 document.addEventListener('DOMContentLoaded', function() {
     
     // --- LÓGICA DE SELEÇÃO DE DIA ---
     const dias = document.querySelectorAll('.day-item');
-    let diaSelecionado = {
-        numero: '2', // Valor padrão inicial
-        semana: 'ter'
-    };
+    let diaSelecionado = { numero: '2', semana: 'ter' }; // Valor padrão inicial
 
     dias.forEach(dia => {
         dia.addEventListener('click', function() {
-            // Remove a classe 'selected' de todos
             dias.forEach(d => d.classList.remove('selected'));
-            // Adiciona no clicado
             this.classList.add('selected');
             
-            // Salva os dados do dia clicado
-            // Pegamos o texto dentro da div .day-circle e do span .day-label
             diaSelecionado.numero = this.querySelector('.day-circle').innerText;
             diaSelecionado.semana = this.querySelector('.day-label').innerText;
         });
@@ -28,14 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     horas.forEach(hora => {
         hora.addEventListener('click', function() {
-            // Se estiver ocupado (busy), não faz nada
             if (this.classList.contains('busy')) return;
-
-            // Remove a classe 'active' de todos
             horas.forEach(h => h.classList.remove('active'));
-            // Adiciona no clicado
             this.classList.add('active');
-
             horaSelecionada = this.innerText;
         });
     });
@@ -45,29 +32,37 @@ document.addEventListener('DOMContentLoaded', function() {
     
     btnConfirmar.addEventListener('click', function() {
         const nomeInput = document.getElementById('input-nome').value;
+        const telefoneInput = document.getElementById('input-number').value;
         const procedimentoInput = document.getElementById('input-procedimento').value;
 
-        // Validação simples (obriga colocar o nome)
-        if (nomeInput.trim() === "") {
+        // Validação simples
+        if (!nomeInput) {
             alert("Por favor, digite seu nome completo.");
             return;
         }
 
-        // Criar objeto com todos os dados
-        const agendamento = {
+        // 1. Criar o objeto do agendamento
+        const novoAgendamento = {
+            id: Date.now(), // Cria um ID único
             nome: nomeInput,
+            telefone: telefoneInput || "Não informado",
             diaNum: diaSelecionado.numero,
             diaSem: diaSelecionado.semana,
             hora: horaSelecionada,
-            procedimento: procedimentoInput || "Corte padrão" // Se não digitar nada, vai padrão
+            procedimento: procedimentoInput || "Corte Padrão"
         };
 
-        // Salvar no Navegador (LocalStorage)
-        // Convertemos o objeto em texto (JSON) para salvar
-        localStorage.setItem('dadosBarbearia', JSON.stringify(agendamento));
+        // 2. SALVAR NA LISTA GERAL (Para o Painel Admin)
+        // Pega o que já tem salvo ou cria um array vazio
+        let listaNoBanco = JSON.parse(localStorage.getItem('bd_todos_agendamentos')) || [];
+        listaNoBanco.push(novoAgendamento);
+        localStorage.setItem('bd_todos_agendamentos', JSON.stringify(listaNoBanco));
 
-        // Redirecionar para a página de confirmação
-        window.location.href = 'confirmacao.html';
+        // 3. SALVAR O ATUAL (Para a página de confirmação imediata)
+        localStorage.setItem('bd_ultimo_agendamento', JSON.stringify(novoAgendamento));
+
+        // Redirecionar
+        alert("Agendamento realizado com sucesso!");
+        window.location.href = 'confirmacao.html'; 
     });
-
 });
