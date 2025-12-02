@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Barbearia Novo Visual</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container d-flex flex-column align-items-center">
+        
+        <div class="logo-area">
+            <img src="/imgs/image 1.png" alt="Logo Barbearia" class="logo-image">
+        </div>
+
+        <div class="card custom-card shadow-lg">
+            
+            <h2 class="text-center card-title mb-4">
+                Crie sua conta
+            </h2>
+
+            <div class="col-md-12">
+                
+                <label class="mb-2 fw-bold" style="color: #333;">Nome de Usuário</label>
+                <input type="text" id="cad-nome" class="form-control custom-input mb-3" placeholder="Ex: Miguel Ramos">
+
+                <label class="mb-2 fw-bold" style="color: #333;">E-mail</label>
+                <input type="email" id="cad-email" class="form-control custom-input mb-3" placeholder="seuemail@exemplo.com">
+
+                <label class="mb-2 fw-bold" style="color: #333;">Senha</label>
+                <input type="password" id="cad-senha" class="form-control custom-input mb-4" placeholder="******">
+
+                <button class="btn btn-custom btn-blue-gradient text-decoration-none w-100" id="btn-cadastrar">
+                    <span>Cadastrar e Entrar</span>
+                </button>
+
+                <div class="text-center mt-3">
+                    <a href="index.html" style="color: #004aad; text-decoration: none; font-weight: 600;">Voltar ao início</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-cadastro.js"></script>
+</body>
+</html>
